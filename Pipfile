@@ -9,6 +9,7 @@ verify_ssl = true
 streamlit = "*"
 sklearn = "*"
 plotly = "*"
+bokeh = "*"
 
 [requires]
 python_version = "3.6"
