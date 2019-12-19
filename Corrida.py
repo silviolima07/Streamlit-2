@@ -3,12 +3,14 @@ import pandas as pd
 import numpy as np
 from bokeh.plotting import figure
 import os
+import time
 
 def main():
     """ Sao Silvestre """
 
     # Titulo
-    st.title("	STREAMLIT APPS	")
+    st.title("	STREAMLIT ")
+    st.markdown("### Lib Python for Web Apps")
 
     st.title("São Silvestre")
     st.markdown("### Periodo: 1991 a 2018")
@@ -32,6 +34,8 @@ def main():
         st.text('Distância: 8900m Tempo: 0:28:39')
         st.text('14 atletas - 12 completaram.')
         st.text('A partir de 1991, o percurso é estabelecido como 15km')
+        st.balloons()
+        
 
 
     def ler_dados(dataset):
@@ -59,6 +63,7 @@ def main():
     datap = df
 
     if (st.sidebar.checkbox("Vencedores")):
+        st.balloons()
         option = st.sidebar.selectbox('Qual deseja: ', ['Paises', 'Homens', 'Mulheres'])
         st.write(option)
         if  (option == 'Paises'):
