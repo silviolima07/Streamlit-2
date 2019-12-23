@@ -100,7 +100,30 @@ def main():
             p = figure(title='Diferença de Tempo entre mulheres e homens',x_axis_label='Ano',y_axis_label='Diferença de tempo(segundos)')
             p.line(x, datap['Dif'], legend_label='Diferença', line_width=2, color='red')
             st.bokeh_chart(p)
-
+    
+    if st.sidebar.checkbox("Fotos Históricas"):
+        st.text(" ")
+        st.markdown("### Largada - 1925")
+        my_placeholder = st.empty()
+        my_placeholder.image('Largada1925.PNG')
+        st.text(' ')
+        st.markdown("### Última corrida noturna foi em 1988")
+        my_placeholder = st.empty()
+        my_placeholder.image('corrida_1968.png')
+        st.text(" ")
+        st.markdown("### Emil Zatopek _ a Locomotiva Humana - campeão em 1952")
+        my_placeholder = st.empty()
+        my_placeholder.image('Emil-1952.jpg')
+        st.text(" ")
+        st.markdown("### Primeira prova feminina - 1975")
+        st.text(" ")
+        my_placeholder = st.empty()
+        my_placeholder.image('1975.png')
+        st.text(" ")
+        st.markdown("### Chegada noturna - 1972")
+        my_placeholder = st.empty()
+        my_placeholder.image('Capa.png')
+        st.balloons()
 
 if __name__ == '__main__':
     main()
