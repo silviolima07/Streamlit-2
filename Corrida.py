@@ -12,12 +12,12 @@ def main():
     st.title("	STREAMLIT ")
     st.markdown("### Lib Python for Web Apps")
 
-    st.title("São Silvestre")
-    st.markdown("### Periodo: 1991 a 2018")
+    st.title("Corrida de São Silvestre")
+    #st.markdown("### Periodo: 1991 a 2018")
 
     st.sidebar.markdown("## by Silvio Lima")
 
-    st.sidebar.markdown('## São Silvestre')
+    st.sidebar.markdown('## Dados Historicos')
 
     if st.sidebar.checkbox("História"):
         #st.markdown("### Fatos e Fotos ")
@@ -72,6 +72,7 @@ def main():
     data = ler_dados(my_dataset)
 
     if st.sidebar.checkbox("Dataset"):
+            st.markdown("## Periodo: 1991 a 2018")
             st.write("28 observações / 9 atributos")
             st.table(data.head(30))
 
@@ -88,6 +89,7 @@ def main():
     datap = df
 
     if (st.sidebar.checkbox("Vencedores")):
+        st.markdown("## Periodo: 1991 a 2018")
         st.balloons()
         option = st.sidebar.selectbox('Qual deseja: ', ['Paises', 'Homens', 'Mulheres'])
         st.write(option)
@@ -106,6 +108,7 @@ def main():
 
 
     if st.sidebar.checkbox("Gráficos"):
+        st.markdown("## Periodo: 1991 a 2018")
         option = st.sidebar.selectbox('Qual deseja',['Idade','Tempo','Diferença'])
         st.write(option)
         if (option == 'Idade'):
